@@ -113,7 +113,7 @@ class SwipingViewController: UIViewController {
         }
         if let rejectedUsers = PFUser.current()?["rejected"]
         {
-            //ignoredUsers += rejectedUsers as! Array
+            ignoredUsers += rejectedUsers as! Array
         }
         query?.whereKey("objectId", notContainedIn: ignoredUsers)
         
